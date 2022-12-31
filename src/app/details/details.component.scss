@@ -1,0 +1,46 @@
+@import '../../styles.scss';
+
+p.bg-pale-orange {
+    padding-top   : 2px;
+    padding-bottom: 2px;
+}
+
+
+.animate {
+    animation-name           : animate;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state     : running;
+    animation-duration       : .9s;
+}
+
+@keyframes animate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+button {
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        opacity: .64;
+    }
+}
+
+.add-to-cart {
+    font-size: 14px;
+
+    @media(min-width:768px) {
+        padding-top   : 5% !important;
+        padding-bottom: 5% !important;
+    }
+
+    &>span {
+        line-height: .7em;
+    }
+}

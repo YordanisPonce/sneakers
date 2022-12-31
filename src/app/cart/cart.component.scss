@@ -1,0 +1,30 @@
+@import '../../styles.scss';
+
+.custom-border-bottom {
+    border-bottom: 1px solid #dee2e6c0;
+}
+
+.cart-header {
+    border-radius: 15px;
+}
+
+.notification-photo {
+    height       : 40px;
+    width        : 38px;
+    object-fit   : cover;
+    border-radius: 5px;
+}
+
+p:not(.position-absolute) {
+    font-size: 13px;
+    opacity  : .8;
+}
+
+.checkout {
+    font-size: 13px;
+}
+
+.py-custom {
+    padding-top   : .7rem;
+    padding-bottom: .7rem;
+}

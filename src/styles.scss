@@ -1,1 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+$orange           : hsl(26, 100%, 55%);
+$pale_orange      :hsl(25, 100%, 94%);
+$very_dark_blue   :hsl(220, 13%, 13%);
+$dark_grayish_blue:hsl(219, 9%, 45%);
+$size_paragraph   :16px;
+
+@font-face {
+    font-family: 'KumbhSans';
+    src        : url(./assets/fonts/KumbhSans-Medium.ttf);
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'KumbhSans';
+    src        : url(./assets/fonts/KumbhSans-Bold.ttf);
+    font-weight: bold;
+}
+
+.f-kumban-normal {
+    font-family: 'KumbhSans';
+    font-weight: normal;
+
+    &>* {
+        @extend .f-kumban-normal;
+    }
+}
+
+.f-kumban-bold {
+    font-family: 'KumbhSans';
+    font-weight: bold;
+}
+
+.bg-orange {
+    background-color: $orange !important;
+}
+
+.bg-pale-orange {
+    background-color: $pale_orange;
+}
+
+.text-orange {
+    color: $orange !important;
+}
+
+.text-pale-orange {
+    color: $pale_orange !important;
+}
+
+.text-very-dark-blue {
+    color: $very_dark_blue !important;
+}
+
+.text-dark-grayish-blue {
+    color: $dark_grayish_blue !important;
+}
+
+.text-orange-opacity {
+    color: hsl(26, 86%, 59%);
+}
+
+
+.fw-medium {
+    font-weight: 400;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-no-drop{
+    cursor: no-drop;
+}

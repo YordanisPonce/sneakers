@@ -1,0 +1,55 @@
+@import '../../styles.scss';
+
+#productBanner {
+    & img {
+        height    : 290px;
+        object-fit: cover !important;
+
+        @media(min-width:768px) {
+            height       : 340px;
+            border-radius: 15px;
+        }
+    }
+
+    & button {
+        opacity: 1 !important;
+        height : 40px;
+        width  : 40px;
+
+        &>span {
+            height          : 40px;
+            width           : 40px;
+            background-color: white !important;
+            opacity         : 1 !important;
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+        }
+    }
+}
+
+.others {
+    & img {
+        max-width    : 70px;
+        max-height   : 70px;
+        border-radius: 8px;
+        object-fit   : cover;
+
+        &:hover {
+            opacity: .4;
+        }
+
+        &.active {
+            opacity: .4;
+        }
+    }
+
+    & figure.active {
+        border       : 2px solid $orange;
+        border-radius: 8px;
+        overflow     : hidden;
+        & > img{
+            opacity: .4;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+<p class="custom-border-bottom px-3 pb-3 f-kumban-bold mb-0 text-dark">Cart</p>
+
+<div class="row py-3 px-3" *ngIf="products.length > 0;else empty_message">
+    <div class="col-12 d-flex justify-content-center align-items-strecht" *ngFor="let item of products;let i = index"
+        [ngClass]="{'mb-2': i < products.length - 1}">
+        <img src="{{item.getPhoto()}}" class="img-fluid notification-photo">
+        <div class="flex-grow-1 ps-2 f-kumban-normal text-dark-grayish-blue">
+            <p class="mb-0">{{item.getName()}}</p>
+            <p class="mb-0">${{item.getPrice() + ' x ' + item.getAmount()}} <span
+                    class="text-dark fw-bold">${{item.getTotal()}}</span></p>
+        </div>
+        <a class="d-flex align-items-center cursor-pointer" (click)="removeItem(i)">
+            <img src="../../assets/images/icon-delete.svg" alt="">
+        </a>
+    </div>
+    <div class="col-12 mt-3">
+        <button
+            class="btn rounded border-0 f-kumban-normal py-custom checkout d-flex justify-content-center align-items-center bg-orange text-white w-100">
+            <span class="text-nowrap">Checkout</span>
+        </button>
+    </div>
+</div>
+<ng-template #empty_message>
+    <div class="flex-grow-1 position-relative">
+        <p class="mb-0 position-absolute top-50 start-50 translate-middle f-kumban-bold text-dark-grayish-blue"
+            style="font-size: 14px;">Your cart is empty</p>
+    </div>
+</ng-template>

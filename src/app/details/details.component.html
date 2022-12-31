@@ -1,0 +1,67 @@
+<p class="f-kumban-normal text-uppercase my-3 fs-13 text-orange-opacity fw-bold">Sneaker company</p>
+<h1 class="f-kumban-bold fs-2 pe-md-5">Fall Limited Edition <br> Sneakers</h1>
+<p class="text-dark-grayish-blue f-kumban-normal" style="font-size: 16px;">
+    These low-profile sneakers are you perfect casual wear companion. Featuring a durable rubber outer sole, they'll
+    withstand everything the weather can offer
+</p>
+<div class="row align-items-center">
+    <div class="col-8 col-md-12 d-flex align-items-center">
+        <h1 class="f-kumban-normal fw-bold fs-3 mb-0">$125.00</h1>
+        <p class="mb-0 ms-3 bg-pale-orange px-2 rounded text-orange f-kumban-normal fw-bold  py-0"
+            style="height: fit-content;">50%</p>
+    </div>
+    <div class="col-4 col-md-12 d-flex justify-content-end justify-content-md-start">
+        <p class="text-decoration-line-through mb-0 text-dark-grayish-blue f-kumban-normal">$250.00</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 col-md-6">
+        <div class="d-flex justify-content-between px-2 mt-4 mb-3">
+            <button (click)="quit()" class="d-flex justify-content-center align-items-center border-0 bg-white" [disabled]="loading"> 
+                <svg width="12" height="4" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <path
+                            d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z"
+                            id="a" />
+                    </defs>
+                    <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a" />
+                </svg>
+            </button>
+            <p class="mb-0 f-kumban-bold ">{{amount}}</p>
+            <button (click)="add()" class="d-flex justify-content-center align-items-center border-0 bg-white" [disabled]="loading">
+                <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <path
+                            d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z"
+                            id="b" />
+                    </defs>
+                    <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 d-flex align-items-center mb-3 mb-md-0 mt-2">
+        <button
+            class="btn flex-grow-1 rounded border-0 f-kumban-normal py-3 py-md-0 add-to-cart d-flex justify-content-center align-items-center bg-orange text-white"
+            (click)="addToCart()" [ngClass]="{'disabled': loading}" [disabled]="loading">
+            <span class="me-2" style="transform: scale(.72);">
+
+                <svg width="22" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="animate"
+                    *ngIf="loading;else icon">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M11,16 C12.1045695,16 13,16.8954305 13,18 C13,19.1045695 12.1045695,20 11,20 C9.8954305,20 9,19.1045695 9,18 C9,16.8954305 9.8954305,16 11,16 Z M4.74123945,13 C6.12195133,13 7.24123945,14.1192881 7.24123945,15.5 C7.24123945,16.8807119 6.12195133,18 4.74123945,18 C3.36052758,18 2.24123945,16.8807119 2.24123945,15.5 C2.24123945,14.1192881 3.36052758,13 4.74123945,13 Z M16.3193286,13.5 C17.4238981,13.5 18.3193286,14.3954305 18.3193286,15.5 C18.3193286,16.6045695 17.4238981,17.5 16.3193286,17.5 C15.2147591,17.5 14.3193286,16.6045695 14.3193286,15.5 C14.3193286,14.3954305 15.2147591,13.5 16.3193286,13.5 Z M18.5,9.31854099 C19.3284271,9.31854099 20,9.99011387 20,10.818541 C20,11.6469681 19.3284271,12.318541 18.5,12.318541 C17.6715729,12.318541 17,11.6469681 17,10.818541 C17,9.99011387 17.6715729,9.31854099 18.5,9.31854099 Z M2.5,6 C3.88071187,6 5,7.11928813 5,8.5 C5,9.88071187 3.88071187,11 2.5,11 C1.11928813,11 0,9.88071187 0,8.5 C0,7.11928813 1.11928813,6 2.5,6 Z M17.7857894,5.20724734 C18.3380741,5.20724734 18.7857894,5.65496259 18.7857894,6.20724734 C18.7857894,6.75953209 18.3380741,7.20724734 17.7857894,7.20724734 C17.2335046,7.20724734 16.7857894,6.75953209 16.7857894,6.20724734 C16.7857894,5.65496259 17.2335046,5.20724734 17.7857894,5.20724734 Z M8,0 C9.65685425,0 11,1.34314575 11,3 C11,4.65685425 9.65685425,6 8,6 C6.34314575,6 5,4.65685425 5,3 C5,1.34314575 6.34314575,0 8,0 Z M15.5,3 C15.7761424,3 16,3.22385763 16,3.5 C16,3.77614237 15.7761424,4 15.5,4 C15.2238576,4 15,3.77614237 15,3.5 C15,3.22385763 15.2238576,3 15.5,3 Z" />
+                </svg>
+                <ng-template #icon>
+                    <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                            fill="currentColor" fill-rule="nonzero" />
+                    </svg>
+                </ng-template>
+            </span>
+            <span class="ms-2 text-nowrap">Add to cart</span>
+        </button>
+    </div>
+</div>

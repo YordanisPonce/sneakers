@@ -1,0 +1,67 @@
+@import '../styles.scss';
+
+.cart {
+    width        : 290px;
+    border-radius: 10px;
+    transform    : translate(18px, 0px);
+    z-index      : 99999999;
+
+    @media(max-width:992px) {
+        transform: translate(18px, -5px);
+    }
+}
+
+.h-200 {
+    height: 200px;
+
+    @media(max-width:768px) {
+        height: 260px;
+    }
+}
+
+.h-fit {
+    height: fit-content;
+}
+
+.d-flex-with-transition {
+    display   : flex;
+    transition: all .2s ease-in-out;
+}
+
+.op-1 {
+    opacity  : 1;
+    transform: translate(18px, -12px);
+    transition: opacity .2s ease-in-out,
+        transform .3s ease-in-out;
+    display: flex;
+
+    @media(max-width:768px) {
+        width     : 100% !important;
+        transform : translate(0px);
+        transform : scaleX(.97);
+        margin-top: 2%;
+    }
+}
+
+.op-0 {
+    opacity  : 0;
+    display  : none;
+    transform: translate(18px, 0px);
+    transition: opacity .3s ease-in-out,
+        transform .4s ease-in-out;
+    pointer-events: none;
+
+    @media(max-width:768px) {
+        width     : 100% !important;
+        transform : translate(0px);
+        transform : scaleX(.97);
+        margin-top: 2%;
+    }
+}
+
+
+@media(min-width:768px) {
+    .container-fluid {
+        flex-grow: 1;
+    }
+}

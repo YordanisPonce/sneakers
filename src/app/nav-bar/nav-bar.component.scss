@@ -1,0 +1,65 @@
+ @import '../../styles.scss';
+
+ .sneakers {
+     font-size: 25px;
+ }
+
+ li a.nav-link {
+     padding: 0 !important;
+ }
+
+ div.offcanvas-body>ul.nav li.nav-item {
+     font-size: 18px;
+ }
+
+
+ .navbar a:nth-last-child(2) {
+     &:hover {
+         color: black !important;
+     }
+ }
+
+ nav.navbar li.nav-item {
+     
+    transition: border-bottom .1s ease-in-out;
+    &:hover,
+    &.active {
+         border-bottom: 4px solid $orange;
+     }
+ }
+
+ nav.navbar .container-fluid div:last-child {
+     & img.img-fluid {
+         max-height: 35px;
+         max-width : 35px;
+
+         @media(max-width:552px) {
+             max-height: 25px;
+             max-width : 25px;
+         }
+     }
+
+     & a>span {
+         top: 15%;
+     }
+ }
+ @media(min-width:768px) {
+
+     .navbar svg {
+         transform: scale(.82);
+     }
+
+     .border-orange:hover {
+         border: 1.8px solid $orange;
+     }
+     nav.navbar div.container-fluid {
+         height: 90px;
+     }
+
+ }
+
+ @media(max-width:768px) {
+     nav.navbar div.container-fluid {
+         border-bottom: 2px solid transparent !important;
+     }
+ }
