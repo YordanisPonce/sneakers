@@ -7,10 +7,10 @@ import { Lightbox } from 'ngx-lightbox';
 })
 export class CarouselComponent {
   albums = [
-    { 'src': '../../assets/images/image-product-1.jpg', 'caption': 'Sneaker', 'thumb': '../../assets/images/image-product-1-thumbnail.jpg' },
-    { 'src': '../../assets/images/image-product-2.jpg', 'caption': 'Sneaker', 'thumb': '../../assets/images/image-product-2-thumbnail.jpg' },
-    { 'src': '../../assets/images/image-product-3.jpg', 'caption': 'Sneaker', 'thumb': '../../assets/images/image-product-3-thumbnail.jpg' },
-    { 'src': '../../assets/images/image-product-4.jpg', 'caption': 'Sneaker', 'thumb': '../../assets/images/image-product-4-thumbnail.jpg' },
+    { 'src': 'assets/images/image-product-1.jpg', 'caption': 'Sneaker', 'thumb': 'assets/images/image-product-1-thumbnail.jpg' },
+    { 'src': 'assets/images/image-product-2.jpg', 'caption': 'Sneaker', 'thumb': 'assets/images/image-product-2-thumbnail.jpg' },
+    { 'src': 'assets/images/image-product-3.jpg', 'caption': 'Sneaker', 'thumb': 'assets/images/image-product-3-thumbnail.jpg' },
+    { 'src': 'assets/images/image-product-4.jpg', 'caption': 'Sneaker', 'thumb': 'assets/images/image-product-4-thumbnail.jpg' },
   ];
 
   constructor(private ligthbox: Lightbox) {
