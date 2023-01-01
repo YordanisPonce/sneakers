@@ -22,7 +22,7 @@ export class DetailsComponent {
   addToCart() {
     this.loading = true;
     setTimeout(() => {
-      let product = new Product('Fall limited edition snakers', 150.00, '../../assets/images/image-product-1-thumbnail.jpg', this.amount);
+      let product = new Product('Fall limited edition snakers', 150.00, 'assets/images/image-product-1-thumbnail.jpg', this.amount);
       this.amount = 1;
       this.item.emit(product);
       this.loading = false;
